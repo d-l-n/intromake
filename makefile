@@ -1,10 +1,11 @@
 CC=gcc
 FLAGS= -Wall -Wextra -Wpedantic -std=c99
 OBJ= peim.o
+TARGET=hello
 
 .PHONY: clean
 
-hello: $(OBJ)
+$(TARGET): $(OBJ)
 	@$(CC) $(FLAGS) peim.c -o $@ $(OBJ)
 	@echo "Compilacion terminada!"
 
