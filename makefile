@@ -16,3 +16,4 @@ $(OBJ): %.o:%.c
 
 clean:
 	@rm -fv $(OBJ) hello
+	@echo "Listo."
