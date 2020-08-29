@@ -1,7 +1,7 @@
 CC=gcc
 FLAGS=-Wall -Wextra -Wpedantic -std=c99
 OBJ=funciones.o
-TARGET=ejercicio01
+TARGET=funcionesmain
 
 .PHONY: clean
 
