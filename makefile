@@ -1,18 +1,18 @@
 CC=gcc
-FLAGS= -Wall -Wextra -Wpedantic -std=c99
-DEBUG= -g
-OBJ= hellofun.o
-TARGET=hello
+FLAGS=-Wall -Wextra -Wpedantic -std=c99
+OBJ=funciones.o
+TARGET=ejercicio01
 
-.PHONY= clean
+.PHONY: clean
 
 $(TARGET): $(OBJ)
-	$(CC) $(FLAGS) hellomain.c -o $@ $(OBJ)
-	@echo "yasss queen!"
+	@$(CC) $(FLAGS) funciones.c -o $@ $(OBJ)
+	@echo "Compilacion terminada!"
 
-$(OBJ): %.o: %.c
-	@echo "Compiling $@ from $<"
-	$(CC) $(FLAGS) -c $<
+$(OBJ): %.o:%.c
+	@echo "Compilando $@ desde $<"
+	@$(CC) $(FLAGS) -c $<
+	@echo "..."
 
 clean:
-	rm -f $(OBJ) hello
+	@rm -fv $(OBJ) hello
